@@ -19,8 +19,15 @@ class User extends CI_Controller {
   }
 
   public function index(){
-    $this->load->view('User/index.php');
+		$data['dataTravel'] = $this->getJSONData('http://128.199.254.147/hint/data-travel.json');
+    $this->load->view('User/index.php',$data);
   }
+
+	public function getJSONData($url){
+		$json = file_get_contents($url);
+		$obj = json_decode($json);
+		return $obj;
+	}
 
 }
 ?>

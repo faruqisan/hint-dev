@@ -30,14 +30,14 @@
           </div>
         </div>
       </div>
-      <div class="section red lighten-2" style="height:100vh">
+      <div class="section red lighten-2">
         <div class="row">
           <div class="col l4 s12 offset-l4" >
             <div class="card hoverable"style="margin-top:-28.5%">
               <form action="Login/doLogin" method="post">
                 <div class="card-content">
                   <!-- go to down button -->
-                  <button onclick="scroll(loginCard)" class="btn-floating btn-large waves-effect waves-light grey lighten-2 right" type="button" name="signup" style="margin-top:-12%;margin-right:-12%;opacity:0.6">
+                  <button onclick="scroll(loginCard)" onmouseover="setOpacity(1)" onmouseout="setOpacity(0.6)" class="btn-floating btn-large waves-effect waves-light grey lighten-2 right" type="button" id="downArrow" style="margin-top:-12%;margin-right:-12%;opacity:0.6">
                     <i class="material-icons black-text">keyboard_arrow_down</i>
                   </button>
                   <h4 class="center-align">Please, Come in</h4>
@@ -67,7 +67,7 @@
                   </div>
                   <div class="row">
                     <div class="col l12 s12">
-                      <button class="btn waves-effect waves-light teal lighten-2" type="submit" name="action" style="width:100%">Sign in
+                      <button class="btn waves-effect waves-light teal lighten-2" type="submit" style="width:100%">Sign in
                         <i class="material-icons right">send</i>
                       </button>
                     </div>
@@ -77,39 +77,39 @@
                       <a href="#modalRegister" class="modal-trigger btn waves-effect waves-light red lighten-2 white-text" style="width:100%">Sign up
                         <i class="material-icons right">add</i>
                       </a>
-                      <div id="modalRegister" class="modal">
-                        <div class="modal-content">
-                          <h4>Register</h4>
-                          <div class="row">
-                            <div class="input-field col l6 s12">
-                              <i class="material-icons prefix">people</i>
-                              <input id="registerName" type="text" class="validate" required="" tabindex="1">
-                              <label for="name">Name</label>
-                            </div>
-                            <div class="input-field col l6 s12">
-                              <i class="material-icons prefix">email</i>
-                              <input onkeyup="checkAvaibility()" id="registerEmail" type="email" class="validate" required="" tabindex="2">
-                              <label for="registerEmail">Email</label>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="input-field col l6 s12">
-                              <i class="material-icons prefix">vpn_key</i>
-                              <input id="registerPassword" type="password" class="validate" required="" tabindex="3" minlength="5" maxlength="20">
-                              <label for="password">Password ( Min. 5 char )</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button onclick="registerUser()" class="modal-action modal-close btn waves-effect waves-light" id="buttonSubmit">Daftar
-                            <i class="material-icons right">send</i>
-                          </button>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </form>
+              <div id="modalRegister" class="modal">
+                <div class="modal-content">
+                  <h4>Register</h4>
+                  <div class="row">
+                    <div class="input-field col l12 s12">
+                      <i class="material-icons prefix">people</i>
+                      <input id="registerName" type="text" class="validate" required="" tabindex="1">
+                      <label for="registerName">Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col l6 s12">
+                      <i class="material-icons prefix">email</i>
+                      <input onkeyup="checkAvaibility()" id="registerEmail" type="email" class="validate" required="" tabindex="2">
+                      <label for="registerEmail">Email</label>
+                    </div>
+                    <div class="input-field col l6 s12">
+                      <i class="material-icons prefix">vpn_key</i>
+                      <input id="registerPassword" type="password" class="validate" required="" tabindex="3" minlength="5" maxlength="20">
+                      <label for="password">Password ( Min. 5 char )</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button onclick="registerUser()" class="modal-action modal-close btn waves-effect waves-light" id="buttonSubmit">Daftar
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 

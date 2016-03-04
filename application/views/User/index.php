@@ -32,6 +32,36 @@
           </div>
         </nav>
       </header>
+      <main>
+        <div class="container">
+          <div class="row">
+            <div class="col l12 s12">
+              <?php //var_dump($dataTravel); ?>
+
+              <table class="bordered highlight">
+                <thead>
+                  <tr>
+                    <th>Nama Perusahaan</th>
+                    <th>Alamat</th>
+                    <th>No TDUP</th>
+                    <th>Wilayah</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach($dataTravel as $row){ ?>
+                    <tr>
+                      <td><?php echo $row->nama_perusahaan ?></td>
+                      <td><?php echo $row->alamat ?></td>
+                      <td><?php echo $row->no_tdup ?></td>
+                      <td><?php echo $row->wilayah ?></td>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/materialize.min.js"></script>
       <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/hint.js"></script>

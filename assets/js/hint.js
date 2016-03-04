@@ -2,6 +2,10 @@ function scroll(id){
   $('html, body').animate({scrollTop:$(id).position().top},1500);
 }
 
+function setOpacity(value){
+  document.getElementById('downArrow').style.opacity=value;
+}
+
 function registerUser(){
   var url = "Login/registerUser/"+md5('user')+"/"+md5('jsonRegister');
 
