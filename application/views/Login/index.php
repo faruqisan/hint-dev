@@ -23,7 +23,7 @@
           <div class="col l12 s12">
             <div class="row">
               <div class="col l12 s12">
-                <h1 class="center-align" style="font-family: 'Cuprum', sans-serif;color:#616161"><b>Help, I need Travel !</b></h1><br>
+                <h1 class="center-align" style="font-family: 'Cuprum', sans-serif;color:#616161"><b>Help, I need you!</b></h1><br>
                 <h4 class="center-align" style="font-family: 'Pacifico', sans-serif;color:#9e9e9e;margin-top:-3%"><b>We have what you need</b></h4>
               </div>
             </div>
