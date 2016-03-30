@@ -82,25 +82,29 @@
                 </div>
               </form>
               <div id="modalRegister" class="modal">
-                <div class="modal-content">
+                <div class="modal-content center">
                   <h4>Register</h4>
-                  <div class="row">
-                    <div class="input-field col l12 s12">
-                      <i class="material-icons prefix">people</i>
-                      <input id="registerName" type="text" class="validate" required="" tabindex="1">
-                      <label for="registerName">Name</label>
+                  <div class="container">
+                    <div class="row">
+                      <div class="input-field col l12 s12">
+                        <i class="material-icons prefix">people</i>
+                        <input id="registerName" type="text" class="validate" required="" tabindex="1">
+                        <label for="registerName">Name</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="input-field col l6 s12">
-                      <i class="material-icons prefix">email</i>
-                      <input onkeyup="checkAvaibility()" id="registerEmail" type="email" class="validate" required="" tabindex="2">
-                      <label for="registerEmail">Email</label>
+                    <div class="row">
+                      <div class="input-field col l12 s12">
+                        <i class="material-icons prefix">email</i>
+                        <input onkeyup="checkAvaibility()" id="registerEmail" type="email" class="validate" required="" tabindex="2">
+                        <label for="registerEmail">Email</label>
+                      </div>
                     </div>
-                    <div class="input-field col l6 s12">
-                      <i class="material-icons prefix">vpn_key</i>
-                      <input id="registerPassword" type="password" class="validate" required="" tabindex="3" minlength="5" maxlength="20">
-                      <label for="password">Password ( Min. 5 char )</label>
+                    <div class="row">
+                      <div class="input-field col l12 s12">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input id="registerPassword" type="password" class="validate" required="" tabindex="3" minlength="5" maxlength="20">
+                        <label for="password">Password ( Min. 5 char )</label>
+                      </div>
                     </div>
                   </div>
                 </div>
