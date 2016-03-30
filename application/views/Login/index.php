@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/materialize.min.css"  media="screen,projection"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Help I Need Travel</title>
+      <title>HINT ! </title>
     </head>
 
     <body class="grey lighten-2">
