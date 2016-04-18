@@ -64,6 +64,10 @@
                     <a href="<?php echo htmlspecialchars($fbLoginUrl); ?>"class="tooltipped btn-floating btn-large waves-effect waves-light white-text right" data-position="bottom" data-delay="50" data-tooltip="When login with Facebook, your email will be stored in the database and cannot be used for public registration and login" type="button" style="background-color:#3b5998;margin-top:-12%">
                       <i class="fa fa-facebook"></i>
                     </a>
+                    <!--twitter login button-->
+                    <a href="<?php echo htmlspecialchars($twitterLoginUrl); ?>"class="tooltipped btn-floating btn-large waves-effect waves-light white-text right" data-position="bottom" data-delay="50" data-tooltip="Login with Twitter" type="button" style="background-color:#55acee;margin-top:-12%">
+                      <i class="fa fa-twitter"></i>
+                    </a>
                   </div>
                   <div class="row">
                     <div class="col l12 s12">
@@ -109,9 +113,15 @@
                   </div>
                 </div>
                 <div class="modal-footer">
-                  <button onclick="registerUser()" class="modal-action modal-close btn waves-effect waves-light" id="buttonSubmit">Daftar
-                    <i class="material-icons right">send</i>
-                  </button>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col l12 s12">
+                        <button onclick="registerUser()" class="modal-action modal-close btn waves-effect waves-light" id="buttonSubmit">Daftar
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
