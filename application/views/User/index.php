@@ -13,57 +13,44 @@
 
   <body class="grey lighten-2">
     <header>
-      <nav>
-        <div class="nav-wrapper" style="padding-left:20px;padding-right:20px">
-          <a href="#" class="brand-logo"><img src="<?php echo base_url(); ?>assets/img/hint-icon-transparent.png" width="50" height="50" style="margin-top:10%"></a>
-          <ul id="nav-mobile" class="right">
-            <li>
-              <?php if($this->session->userdata('facebook')!=null){ ?>
-                <a href="#" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('facebook')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
-              <?php }else if($this->session->userdata('twitter')!=null){?>
-                <a href="" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('twitter')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
-              <?php }else{ ?>
-                <a href="#" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('loginSession')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
-              <?php } ?>
-              <ul id="dropdownUser" class="dropdown-content">
-                <li>
-                  <a class="" href="<?php echo site_url('Login/doLogout'); ?>"><i class="material-icons left">power_settings_new</i>Logout</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="row">
-        <div class="col l4 s12">
-          <div class="row">
-            <div class="col l12 s12">
-              <div class="card">
-                <div class="card-content center">
-                  <h4 class="center-align">Travel List</h4>
-                  <button onclick="scroll(loginCard)" onmouseover="setOpacity(1)" onmouseout="setOpacity(0.6)" class="btn-floating btn-large waves-effect waves-light grey lighten-2" type="button" id="downArrow" style="margin-top:-50px;bottom:-55px;opacity:0.6">
-                    <i class="material-icons black-text">keyboard_arrow_down</i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col l12 s12">
-              <ul class="collapsible" data-collapsible="accordion">
-                <?php foreach($dataTravel as $row){ ?>
-                  <li>
-                    <div class="collapsible-header"><i class="material-icons">directions_car</i><?php echo $row->nama_perusahaan ?></div>
-                    <div class="collapsible-body"><p><?php echo $row->alamat ?><br><?php echo $row->wilayah ?></p></div>
-                  </li>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper" style="padding-left:20px;padding-right:20px">
+            <a href="#" class="brand-logo"><img src="<?php echo base_url(); ?>assets/img/hint-icon-transparent.png" width="50" height="50" style="margin-top:10%"></a>
+            <ul id="nav-mobile" class="right">
+              <li>
+                <?php if($this->session->userdata('facebook')!=null){ ?>
+                  <a href="#" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('facebook')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
+                <?php }else if($this->session->userdata('twitter')!=null){?>
+                  <a href="" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('twitter')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
+                <?php }else{ ?>
+                  <a href="#" class="dropdown-button" data-beloworigin="true" data-activates="dropdownUser"><i class="material-icons left">account_circle</i><?php echo $this->session->userdata('loginSession')['name'] ?><i class="material-icons right">arrow_drop_down</i></a>
                 <?php } ?>
-              </ul>
-            </div>
+                <ul id="dropdownUser" class="dropdown-content">
+                  <li>
+                    <a class="" href="<?php echo site_url('Login/doLogout'); ?>"><i class="material-icons left">power_settings_new</i>Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="col l8 s12" style="height:90vh" id=map>
+        </nav>
+      </div>
+      <ul id="staggered-test" class="collapsible side-nav fixed" data-collapsible="expandable" style="width:370px;margin-top:64px;">
+        <li>
+          <h5>Daftar Travel</h5>
+        </li>
+        <?php foreach($dataTravel as $row){ ?>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">directions_car</i><?php echo $row->nama_perusahaan ?></div>
+            <div class="collapsible-body"><p><?php echo $row->alamat ?><br><?php echo $row->wilayah ?></p></div>
+          </li>
+        <?php } ?>
+      </ul>
+    </header>
+    <main style="padding-left:370px">
+      <div class="row">
+        <div class="col l12 s12" style="height:90vh;" id=map>
           <script>
             var map;
             function initMap() {
